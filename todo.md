@@ -1,6 +1,6 @@
-# Tarefas de Atualização Final
+# Plano de Commit e Conteúdo Instagram
 
-- [ ] Atualizar o número de telefone para `945282557`.
-- [ ] Adicionar o link do LinkedIn (`https://www.linkedin.com/in/euclénio-cadete-560471278/`).
-- [ ] Garantir que o link do GitHub está visível no rodapé e nas secções relevantes.
-- [ ] Guardar checkpoint e fornecer instruções claras para o utilizador publicar o site.
+- [x] Fazer commit e push das últimas alterações de contacto e links no repositório GitHub.
+- [ ] Criar o plano editorial com 4 posts recomendados em formato Reels/Carrossel.
+- [ ] Configurar os textos, ganchos e chamadas para ação.
+- [ ] Apresentar o plano ao utilizador e propor o agendamento.
