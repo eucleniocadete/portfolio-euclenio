@@ -522,14 +522,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-7 space-y-6">
-              <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 shadow-2xl">
-                <img
-                  src="/manus-storage/euclenio-whatsapp-contact_4a35dd9a.png"
-                  alt="Euclénio Cadete com chamada de contacto por WhatsApp"
-                  className="block w-full max-h-[620px] object-cover object-top"
-                />
-              </div>
+            <div className="lg:col-span-7">
               <Card className="bg-slate-900/90 border-slate-800 rounded-3xl p-8 shadow-2xl">
                 <form onSubmit={handleContactSubmit} className="space-y-6">
                   <div className="space-y-2">

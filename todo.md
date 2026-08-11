@@ -1,6 +1,5 @@
-# Tarefas de Edição e Integração WhatsApp
+# Tarefas de Remoção de Imagem
 
-- [x] Analisar a fotografia fornecida e o requisito de adicionar botão de WhatsApp no canto inferior direito.
-- [x] Editar a imagem para adicionar o selo/botão de WhatsApp.
-- [x] Adicionar o botão flutuante de WhatsApp ao código do portfólio.
-- [x] Efetuar commit e push para o repositório GitHub.
+- [x] Receber o pedido do utilizador para remover a fotografia adaptada.
+- [ ] Retirar o bloco de imagem do código da página `Home.tsx`.
+- [ ] Fazer commit e push das alterações para o GitHub.
