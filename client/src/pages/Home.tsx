@@ -522,7 +522,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 shadow-2xl">
+                <img
+                  src="/manus-storage/euclenio-whatsapp-contact_4a35dd9a.png"
+                  alt="Euclénio Cadete com chamada de contacto por WhatsApp"
+                  className="block w-full max-h-[620px] object-cover object-top"
+                />
+              </div>
               <Card className="bg-slate-900/90 border-slate-800 rounded-3xl p-8 shadow-2xl">
                 <form onSubmit={handleContactSubmit} className="space-y-6">
                   <div className="space-y-2">
@@ -582,6 +589,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <a
+        href="https://wa.me/244945282557?text=Olá%20Euclénio%2C%20encontrei%20o%20teu%20portfólio%20e%20gostaria%20de%20falar%20contigo."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar com Euclénio pelo WhatsApp"
+        className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-500 px-4 py-3 text-sm font-bold text-white shadow-2xl shadow-emerald-500/30 transition-all duration-200 hover:-translate-y-1 hover:bg-emerald-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 active:scale-95"
+      >
+        <MessageSquare className="h-5 w-5" />
+        <span className="hidden sm:inline">Falar no WhatsApp</span>
+      </a>
 
       {/* Footer */}
       <footer className="py-12 border-t border-slate-800/80 bg-slate-950 text-slate-400 text-sm">

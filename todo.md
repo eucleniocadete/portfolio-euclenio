@@ -1,6 +1,6 @@
-# Tarefas de Agendamento Instagram
+# Tarefas de Edição e Integração WhatsApp
 
-- [x] Definir horário sugerido para amanhã (ex: 18:30) e carrossel de imagens.
-- [x] Criar a copy e a estrutura visual das imagens para o carrossel de lançamento do portfólio.
-- [x] Apresentar o plano ao utilizador e pedir confirmação da hora de agendamento.
-- [ ] Executar o agendamento após a confirmação.
+- [x] Analisar a fotografia fornecida e o requisito de adicionar botão de WhatsApp no canto inferior direito.
+- [ ] Editar a imagem para adicionar o selo/botão de WhatsApp.
+- [ ] Adicionar o botão flutuante de WhatsApp ao código do portfólio.
+- [ ] Efetuar commit e push para o repositório GitHub.
