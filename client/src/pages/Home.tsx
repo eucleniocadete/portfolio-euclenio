@@ -11,7 +11,8 @@ import {
   Globe, 
   Instagram, 
   Github, 
-  Linkedin, 
+  Linkedin,
+  Phone, 
   Mail, 
   ExternalLink, 
   Sparkles, 
@@ -23,13 +24,14 @@ import {
   Zap,
   Coffee,
   MessageSquare,
-  Send
+  Send,
+  Loader2
 } from "lucide-react";
 import { toast } from "sonner";
 
 export default function Home() {
   const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<'idle' | 'loading' | 'success'>('idle');
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,37 +39,38 @@ export default function Home() {
       toast.error("Por favor, preencha todos os campos do formulário.");
       return;
     }
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    setSubmitState('loading');
+    window.setTimeout(() => {
+      setSubmitState('success');
       toast.success("Mensagem enviada com sucesso! Entrarei em contacto em breve.");
       setContactForm({ name: '', email: '', message: '' });
-    }, 1000);
+    }, 1200);
   };
 
   const projects = [
     {
-      title: "DevMetrics AI",
-      category: "Fullstack / AI",
-      description: "Plataforma inteligente para análise de performance de código e sugestões de refatoração automática com IA.",
-      tags: ["React", "TypeScript", "Node.js", "OpenAI API"],
-      metrics: "+40% produtividade",
+      title: "Cantina Online DDF",
+      category: "Projeto académico",
+      description: "Projeto desenvolvido no percurso técnico, pensado para organizar uma experiência digital de cantina e aproximar tecnologia das necessidades do dia a dia.",
+      tags: ["Lógica de programação", "Desenvolvimento web", "Projeto académico"],
+      metrics: "Percurso académico",
       imageBg: "from-blue-900/40 to-indigo-950/60"
     },
     {
-      title: "CloudScale Dashboard",
-      category: "Cloud Architecture",
-      description: "Painel de monitorização em tempo real para infraestruturas distribuídas com alertas preditivos.",
-      tags: ["Next.js", "Tailwind CSS", "GraphQL", "Docker"],
-      metrics: "99.9% uptime monitorizado",
-      imageBg: "from-slate-900/40 to-blue-950/60"
+      title: "RegistAgro",
+      category: "Solução digital",
+      description: "Uma das soluções criadas ao longo da formação em informática, demonstrando interesse em aplicar software a contextos concretos e úteis.",
+      tags: ["Análise de requisitos", "Bases de dados", "Projeto académico"],
+      metrics: "Projeto listado no currículo",
+      imageBg: "from-emerald-950/50 to-blue-950/60"
     },
     {
-      title: "CodeFlow Mobile",
-      category: "Mobile App",
-      description: "Aplicação móvel para revisão rápida de pull requests e gestão de sprints em equipas de engenharia.",
-      tags: ["React Native", "Expo", "Supabase"],
-      metrics: "4.9★ na App Store",
+      title: "Calculadora de IMC",
+      category: "Mobile / Flutter",
+      description: "Aplicação de cálculo de índice de massa corporal desenvolvida para praticar construção de interfaces e lógica em Flutter.",
+      tags: ["Flutter", "Mobile", "Lógica de programação"],
+      metrics: "Projeto académico",
       imageBg: "from-indigo-950/40 to-slate-900/60"
     }
   ];
@@ -162,7 +165,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg text-slate-300 max-w-2xl leading-relaxed">
-                Olá, sou o <strong className="text-white">Euclénio Cadete</strong>. Desenvolvo soluções robustas em código e partilho conhecimento prático sobre engenharia de software e produtividade na comunidade digital.
+                Olá, sou o <strong className="text-white">Euclénio Cadete</strong>, Desenvolvedor de Software Júnior com foco em backend. Desenvolvo soluções técnicas com atenção à qualidade, ao cliente e à colaboração em equipa, enquanto partilho conhecimento prático sobre tecnologia.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
@@ -180,12 +183,12 @@ export default function Home() {
                   <div className="text-xs text-slate-400">Seguidores no IG</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-white">4+</div>
-                  <div className="text-xs text-slate-400">Anos de Código</div>
+                  <div className="text-2xl font-bold text-white">10+</div>
+                  <div className="text-xs text-slate-400">Projetos académicos</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-white">100%</div>
-                  <div className="text-xs text-slate-400">Foco e Qualidade</div>
+                  <div className="text-2xl font-bold text-white">14</div>
+                  <div className="text-xs text-slate-400">Média de formação</div>
                 </div>
               </div>
             </div>
@@ -237,10 +240,10 @@ export default function Home() {
                 Engenharia rigorosa unida à partilha de conhecimento.
               </h2>
               <p className="text-slate-300 leading-relaxed">
-                Acredito que o verdadeiro valor da programação reside não apenas no código limpo e eficiente, mas na capacidade de comunicar conceitos complexos de forma simples e acessível.
+                Sou Desenvolvedor de Software Júnior com foco em desenvolvimento backend. Durante um estágio de seis meses na Kudika Digital, trabalhei no desenvolvimento e manutenção de APIs e serviços backend, implementei regras de negócio e integrações entre sistemas, apoiei a correção de bugs e participei em testes e validações técnicas.
               </p>
               <p className="text-slate-300 leading-relaxed">
-                Através da minha presença no Instagram (<strong className="text-white">@_euclenio_</strong>), crio conteúdos educativos e dinâmicos para inspirar outros programadores e impulsionar a comunidade tecnológica.
+                A minha formação como Técnico de Informática no Instituto Politécnico Dom Damião Franklin, concluída em 2026 com média de 14 valores, reforçou uma postura autodidata, disciplinada e orientada para resolver problemas reais. No Instagram (<strong className="text-white">@_euclenio_</strong>), transformo essa aprendizagem em conteúdo acessível para a comunidade.
               </p>
               <div className="flex gap-4 pt-2">
                 <div className="flex items-center gap-2 text-sm text-slate-300">
@@ -260,9 +263,9 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 flex items-center justify-center mb-4">
                   <Terminal className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Desenvolvimento Técnico</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Experiência Backend</h3>
                 <p className="text-sm text-slate-400">
-                  Criação de aplicações web e mobile de alto desempenho, arquitetura escalável e integração de serviços modernos.
+                  Experiência de estágio na Kudika Digital com APIs, serviços backend, regras de negócio, integrações entre sistemas, testes e correção de bugs.
                 </p>
               </Card>
 
@@ -270,9 +273,9 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-pink-600/10 text-pink-400 flex items-center justify-center mb-4">
                   <Instagram className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Criação de Conteúdo</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Formação Técnica</h3>
                 <p className="text-sm text-slate-400">
-                  Produção de Reels, carrosséis educativos e dicas práticas sobre ferramentas essenciais para programadores.
+                  Técnico de Informática pelo Instituto Politécnico Dom Damião Franklin, com base em lógica, programação, bases de dados e desenvolvimento de soluções.
                 </p>
               </Card>
 
@@ -280,9 +283,9 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4">
                   <Cpu className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Inteligência Artificial</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Projetos & Competições</h3>
                 <p className="text-sm text-slate-400">
-                  Utilização de ferramentas de IA para otimizar workflows diários, automação de testes e geração de código inteligente.
+                  Participação em feiras científicas, na Maratona de Programação do ITEL e na criação e exposição de soluções digitais académicas.
                 </p>
               </Card>
 
@@ -290,9 +293,9 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-xl bg-emerald-600/10 text-emerald-400 flex items-center justify-center mb-4">
                   <Globe className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Comunidade Tech</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Perfil Humano</h3>
                 <p className="text-sm text-slate-400">
-                  Fomento da partilha aberta de conhecimento, resolução de bugs em equipa e mentoria para novos talentos.
+                  Pessoa motivada, disciplinada e colaborativa, com alegria em ajudar os outros e interesse contínuo por tecnologia, programação e voluntariado.
                 </p>
               </Card>
             </div>
@@ -364,7 +367,7 @@ export default function Home() {
               </p>
             </div>
             <Button asChild variant="outline" className="border-slate-800 bg-slate-900 hover:bg-slate-800 text-slate-200 rounded-xl">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/eucleniocadete" target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4 mr-2" /> Ver GitHub
               </a>
             </Button>
@@ -402,9 +405,11 @@ export default function Home() {
                   </CardContent>
                 </div>
                 <CardFooter className="px-6 pb-6 pt-0 border-t border-slate-800/60 mt-4 flex items-center justify-between">
-                  <span className="text-xs text-slate-500">Repositório Público</span>
-                  <Button variant="ghost" size="sm" className="text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 p-0 h-auto font-semibold">
-                    Explorar <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
+                      <span className="text-xs text-slate-500">Projetos de Euclénio</span>
+                  <Button asChild variant="ghost" size="sm" className="text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 p-0 h-auto font-semibold">
+                    <a href="https://github.com/eucleniocadete" target="_blank" rel="noopener noreferrer">
+                      Ver GitHub <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
+                    </a>
                   </Button>
                 </CardFooter>
               </Card>
@@ -481,7 +486,17 @@ export default function Home() {
                   </div>
                   <div>
                     <span className="block text-xs text-slate-500">Email Direto</span>
-                    <span className="font-medium text-white">euclenio.cadete@example.com</span>
+                    <a href="mailto:eucleniocadete@gmail.com" className="font-medium text-white hover:text-blue-400 transition-colors">eucleniocadete@gmail.com</a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 text-slate-300">
+                  <div className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-blue-400">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="block text-xs text-slate-500">Telefone</span>
+                    <a href="tel:+2449458282557" className="font-medium text-white hover:text-blue-400 transition-colors">+244 945 828 2557</a>
                   </div>
                 </div>
 
@@ -491,7 +506,7 @@ export default function Home() {
                   </div>
                   <div>
                     <span className="block text-xs text-slate-500">Instagram</span>
-                    <span className="font-medium text-white">@_euclenio_</span>
+                    <a href="https://instagram.com/_euclenio_" target="_blank" rel="noopener noreferrer" className="font-medium text-white hover:text-pink-400 transition-colors">@_euclenio_</a>
                   </div>
                 </div>
               </div>
@@ -533,8 +548,23 @@ export default function Home() {
                     />
                   </div>
 
-                  <Button type="submit" disabled={isSubmitting} className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl shadow-lg shadow-blue-600/30">
-                    {isSubmitting ? "A enviar..." : "Enviar Mensagem"} <Send className="w-4 h-4 ml-2" />
+                  {submitState === 'success' && (
+                    <div className="flex items-start gap-3 rounded-xl border border-emerald-500/25 bg-emerald-500/10 p-4 text-sm text-emerald-300" role="status" aria-live="polite">
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0" />
+                      <div>
+                        <p className="font-semibold text-emerald-200">Mensagem preparada com sucesso.</p>
+                        <p className="mt-1 text-emerald-300/80">Obrigado pelo contacto. Entrarei em contacto assim que possível.</p>
+                      </div>
+                    </div>
+                  )}
+                  <Button type="submit" disabled={submitState === 'loading'} className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl shadow-lg shadow-blue-600/30 transition-all">
+                    {submitState === 'loading' ? (
+                      <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> A enviar mensagem...</>
+                    ) : submitState === 'success' ? (
+                      <><CheckCircle2 className="w-4 h-4 mr-2" /> Enviado com sucesso</>
+                    ) : (
+                      <><Send className="w-4 h-4 mr-2" /> Enviar Mensagem</>
+                    )}
                   </Button>
                 </form>
               </Card>
@@ -558,11 +588,11 @@ export default function Home() {
             <a href="https://instagram.com/_euclenio_" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+            <a href="https://github.com/eucleniocadete" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-              <Linkedin className="w-5 h-5" />
+            <a href="mailto:eucleniocadete@gmail.com" className="hover:text-blue-400 transition-colors" aria-label="Enviar email">
+              <Mail className="w-5 h-5" />
             </a>
           </div>
         </div>
