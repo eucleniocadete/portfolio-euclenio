@@ -1,8 +1,6 @@
-# Tarefas de Guiões para Instagram
+# Tarefas de Agendamento Instagram
 
-- [x] Selecionar os dois vídeos do plano editorial (Produtividade no VS Code e Bastidores do RegistAgro).
-- [x] Escrever o guião detalhado para o Vídeo 1 (Extensões de VS Code).
-- [x] Escrever o guião detalhado para o Vídeo 2 (Bastidores e modelação de dados do RegistAgro).
-- [x] Incluir indicações de ritmo, áudio, texto no ecrã e legenda para publicações.
-- [x] Guardar em ficheiro markdown e entregar ao utilizador.
-- [x] Criar checkpoint com os guiões gerados.
+- [x] Definir horário sugerido para amanhã (ex: 18:30) e carrossel de imagens.
+- [x] Criar a copy e a estrutura visual das imagens para o carrossel de lançamento do portfólio.
+- [x] Apresentar o plano ao utilizador e pedir confirmação da hora de agendamento.
+- [ ] Executar o agendamento após a confirmação.
