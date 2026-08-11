@@ -1,6 +1,8 @@
-# Plano de Commit e Conteúdo Instagram
+# Tarefas de Guiões para Instagram
 
-- [x] Fazer commit e push das últimas alterações de contacto e links no repositório GitHub.
-- [x] Criar o plano editorial com 4 posts recomendados em formato Reels/Carrossel.
-- [x] Configurar os textos, ganchos e chamadas para ação.
-- [x] Apresentar o plano ao utilizador e propor o agendamento.
+- [x] Selecionar os dois vídeos do plano editorial (Produtividade no VS Code e Bastidores do RegistAgro).
+- [x] Escrever o guião detalhado para o Vídeo 1 (Extensões de VS Code).
+- [x] Escrever o guião detalhado para o Vídeo 2 (Bastidores e modelação de dados do RegistAgro).
+- [x] Incluir indicações de ritmo, áudio, texto no ecrã e legenda para publicações.
+- [x] Guardar em ficheiro markdown e entregar ao utilizador.
+- [x] Criar checkpoint com os guiões gerados.
