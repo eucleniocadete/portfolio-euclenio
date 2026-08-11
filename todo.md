@@ -1,8 +1,6 @@
-# Tarefas de Publicação no GitHub
+# Tarefas de Atualização Final
 
-- [x] Atualizar os dados do currículo e links reais no portfólio.
-- [x] Criar a competência reutilizável `portfolio-showcase-builder`.
-- [x] Inicializar o repositório Git local e verificar o estado do projeto.
-- [x] Verificar a autenticação na CLI do GitHub (`gh auth status`).
-- [x] Criar o repositório público `portfolio-euclenio` via `gh repo create`.
-- [x] Enviar o código para o GitHub e confirmar o sucesso da publicação.
+- [ ] Atualizar o número de telefone para `945282557`.
+- [ ] Adicionar o link do LinkedIn (`https://www.linkedin.com/in/euclénio-cadete-560471278/`).
+- [ ] Garantir que o link do GitHub está visível no rodapé e nas secções relevantes.
+- [ ] Guardar checkpoint e fornecer instruções claras para o utilizador publicar o site.

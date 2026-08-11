@@ -496,7 +496,7 @@ export default function Home() {
                   </div>
                   <div>
                     <span className="block text-xs text-slate-500">Telefone</span>
-                    <a href="tel:+2449458282557" className="font-medium text-white hover:text-blue-400 transition-colors">+244 945 828 2557</a>
+                    <a href="tel:945282557" className="font-medium text-white hover:text-blue-400 transition-colors">945282557</a>
                   </div>
                 </div>
 
@@ -507,6 +507,16 @@ export default function Home() {
                   <div>
                     <span className="block text-xs text-slate-500">Instagram</span>
                     <a href="https://instagram.com/_euclenio_" target="_blank" rel="noopener noreferrer" className="font-medium text-white hover:text-pink-400 transition-colors">@_euclenio_</a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 text-slate-300">
+                  <div className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-sky-400">
+                    <Linkedin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="block text-xs text-slate-500">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/eucl%C3%A9nio-cadete-560471278/" target="_blank" rel="noopener noreferrer" className="font-medium text-white hover:text-sky-400 transition-colors">Euclénio Cadete</a>
                   </div>
                 </div>
               </div>
@@ -593,6 +603,9 @@ export default function Home() {
             </a>
             <a href="mailto:eucleniocadete@gmail.com" className="hover:text-blue-400 transition-colors" aria-label="Enviar email">
               <Mail className="w-5 h-5" />
+            </a>
+            <a href="https://www.linkedin.com/in/eucl%C3%A9nio-cadete-560471278/" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors" aria-label="Abrir LinkedIn">
+              <Linkedin className="w-5 h-5" />
             </a>
           </div>
         </div>
