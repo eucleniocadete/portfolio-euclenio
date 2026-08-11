@@ -464,6 +464,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Recommendations & Feedback Section */}
+      <section id="depoimentos" className="py-24 bg-slate-950 border-t border-slate-800/80">
+        <div className="container max-w-7xl mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 text-xs font-semibold">
+              <Sparkles className="w-4 h-4" /> Feedback & Colaboração
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Recomendações e Dinâmica de Equipa</h2>
+            <p className="text-slate-400">
+              O reconhecimento do rigor técnico, da postura em equipa e da capacidade de entrega demonstrados em projetos e estágios.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="bg-slate-900/90 border-slate-800 rounded-3xl p-8 shadow-xl relative overflow-hidden group hover:border-emerald-500/40 transition-all">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl group-hover:bg-emerald-500/10 transition-all" />
+              <div className="space-y-4 relative z-10">
+                <div className="flex items-center gap-1 text-emerald-400">
+                  {"★".repeat(5)}
+                </div>
+                <p className="text-slate-300 italic leading-relaxed">
+                  "O Euclénio demonstrou uma excelente capacidade de adaptação e rigor técnico durante a sua passagem por equipas de desenvolvimento. A sua dedicação em backend, resolução de bugs e integração de APIs destaca-se pela clareza e foco na qualidade."
+                </p>
+                <div className="pt-4 border-t border-slate-800/80 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold text-sm">
+                    KD
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white text-sm">Equipa Técnica & Mentoria</h4>
+                    <span className="text-xs text-slate-500">Kudika Digital</span>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="bg-slate-900/90 border-slate-800 rounded-3xl p-8 shadow-xl relative overflow-hidden group hover:border-blue-500/40 transition-all">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-all" />
+              <div className="space-y-4 relative z-10">
+                <div className="flex items-center gap-1 text-blue-400">
+                  {"★".repeat(5)}
+                </div>
+                <p className="text-slate-300 italic leading-relaxed">
+                  "Comprometido com a excelência e com uma forte postura autodidata. O desenvolvimento de projetos académicos complexos como o RegistAgro reflete a sua capacidade de transformar conceitos teóricos em software funcional."
+                </p>
+                <div className="pt-4 border-t border-slate-800/80 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-indigo-600/20 text-indigo-400 flex items-center justify-center font-bold text-sm">
+                    IT
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white text-sm">Comunidade Académica & ITEL</h4>
+                    <span className="text-xs text-slate-500">Projetos & Competições</span>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contacto" className="py-24 bg-slate-900/40 border-t border-slate-800/80">
         <div className="container max-w-7xl mx-auto px-4">
@@ -583,16 +642,19 @@ export default function Home() {
         </div>
       </section>
 
-      <a
-        href="https://wa.me/244945282557?text=Olá%20Euclénio%2C%20encontrei%20o%20teu%20portfólio%20e%20gostaria%20de%20falar%20contigo."
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Falar com Euclénio pelo WhatsApp"
-        className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-500 px-4 py-3 text-sm font-bold text-white shadow-2xl shadow-emerald-500/30 transition-all duration-200 hover:-translate-y-1 hover:bg-emerald-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 active:scale-95"
-      >
-        <MessageSquare className="h-5 w-5" />
-        <span className="hidden sm:inline">Falar no WhatsApp</span>
-      </a>
+      <div className="fixed bottom-6 right-6 z-50 flex items-center">
+        <span className="absolute -inset-1 rounded-full bg-emerald-400 opacity-75 animate-ping pointer-events-none" />
+        <a
+          href="https://wa.me/244945282557?text=Olá%20Euclénio%2C%20encontrei%20o%20teu%20portfólio%20e%20gostaria%20de%20falar%20contigo."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Falar com Euclénio pelo WhatsApp"
+          className="relative inline-flex items-center gap-2 rounded-full border border-emerald-300/40 bg-emerald-500 px-5 py-3.5 text-sm font-bold text-white shadow-2xl shadow-emerald-500/50 transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 active:scale-95 animate-bounce"
+        >
+          <MessageSquare className="h-5 w-5 animate-pulse" />
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
 
       {/* Footer */}
       <footer className="py-12 border-t border-slate-800/80 bg-slate-950 text-slate-400 text-sm">

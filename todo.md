@@ -1,5 +1,6 @@
-# Tarefas de Remoção de Imagem
+# Tarefas Finais
 
-- [x] Receber o pedido do utilizador para remover a fotografia adaptada.
-- [x] Retirar o bloco de imagem do código da página `Home.tsx`.
-- [x] Fazer commit e push das alterações para o GitHub.
+- [x] Planear a adição de depoimentos profissionais e animação do botão de WhatsApp.
+- [ ] Adicionar a secção de depoimentos e a animação de pulso no botão do WhatsApp em `Home.tsx`.
+- [ ] Ativar e configurar o GitHub Pages via CLI.
+- [ ] Fazer commit e push das alterações e entregar os links finais.
